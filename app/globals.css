@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+  }
+
+  body {
+    @apply bg-netflix-black text-white;
+  }
+
+  ::selection {
+    @apply bg-netflix-red text-white;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-netflix-black;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-netflix-red/40 rounded-full hover:bg-netflix-red/60 transition-colors;
+  }
+}
+
+@layer utilities {
+  .delay-1000 {
+    animation-delay: 1s;
+  }
+}
