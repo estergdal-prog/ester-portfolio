@@ -47,7 +47,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo(
     () => ({ language, setLanguage, toggleLanguage }),
-    [language]
+    [language, setLanguage, toggleLanguage]
   )
 
   return (
